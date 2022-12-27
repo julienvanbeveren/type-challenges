@@ -50,13 +50,6 @@ type MyAwaited<
   ? L
   : never;
 
-// type MyAwaited<T extends Promise<any>> = T extends Promise<infer F>
-//   ? F extends Promise<any>
-//     ? MyAwaited<F>
-//     : F
-//   : never;
-// type Test = MyAwaited<X>;
-
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from "@type-challenges/utils";
 
