@@ -19,12 +19,7 @@
 
 /* _____________ Your Code Here _____________ */
 
-type Falsy = false | 0 | "" | null | undefined;
-type If<C extends boolean, T, F> = C extends false
-  ? T extends Falsy
-    ? T
-    : F
-  : T;
+type If<C extends boolean, T, F> = C extends true ? T : F;
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from "@type-challenges/utils";
