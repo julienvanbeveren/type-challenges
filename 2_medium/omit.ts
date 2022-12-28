@@ -31,7 +31,7 @@
 /* _____________ Your Code Here _____________ */
 
 type MyOmit<T extends { [x: string]: any }, K extends keyof T> = {
-  [key in keyof T as key extends keyof K ? never : key]: T[key];
+  [key in keyof T as key extends K ? never : key]: T[key];
 };
 
 type Test = MyOmit<Todo, "description">;
